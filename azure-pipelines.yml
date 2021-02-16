@@ -19,6 +19,10 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/*.csproj'
 - task: PublishBuildArtifacts@1
   displayName: Artifacts
   inputs:
