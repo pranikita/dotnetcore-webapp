@@ -14,10 +14,12 @@ steps:
   displayName: DotNetBuild
   inputs:
     command: 'build'
+    projects: '**/*.csproj'
 - task: DotNetCoreCLI@2
   displayName: DotNetPublish
   inputs:
     command: 'publish'
+    projects: '**/*.csproj'
     publishWebProjects: true
 - task: DotNetCoreCLI@2
   inputs:
